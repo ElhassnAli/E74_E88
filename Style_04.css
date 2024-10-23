@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+body .container {
+  width: 505px;
+  height: 455px;
+  margin: 30px auto;
+  background-color: #eee;
+  display: grid;
+  gap: 15px 15px;
+  grid-template-columns: repeat(2, 250px);
+  grid-template-rows: auto;
+  position: relative;
+}
+
+.E div,
+.L div {
+  background-color: #363234;
+  color: white;
+}
+
+.E,
+.L {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: repeat(7, 65px);
+
+}
+
+.one {
+  grid-area: 1/2/1/5
+}
+
+.two {
+  grid-area: 1/1/4/1;
+}
+
+.three {
+  grid-area: 4/1/5/5;
+}
+
+.four {
+  grid-area: 5/1/7/1;
+}
+
+.five {
+  grid-area: 7/1/8/5
+}
+
+.-one {
+  grid-area: 1/1/8/1;
+}
+
+.-two {
+  grid-area: 7/2/8/5;
+}
+
+.container:before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  position: absolute;
+  left: 180px;
+  top: 7px;
+  animation-name: move-E;
+ animation-delay: 3s;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+
+}
+
+.container::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  animation-name: move-L;
+  animation-duration: 6s;
+  animation-delay: 9s;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+
+@keyframes move-E {
+  0% {
+    left: 180px;
+    top: 7px;
+  }
+
+  10% {
+    left: 7px;
+    top: 7px;
+  }
+
+  20% {
+    left: 7px;
+    top: 200px;
+  }
+
+  30% {
+    left: 180px;
+    top: 200px;
+  }
+
+  40% {
+    left: 7px;
+    top: 200px;
+  }
+
+  50% {
+    left: 7px;
+    top: 395px;
+  }
+
+  60% {
+    top: 395px;
+    left: 180px;
+  }
+
+  70% {
+    top: 395px;
+    left: 180px;
+
+  }
+
+  80% {
+    top: 395px;
+    left: 7px;
+
+  }
+
+  90% {
+    top: 7px;
+    left: 7px;
+  }
+
+  100% {
+    top: 7px;
+    left: 180px;
+
+  }
+}
+
+@keyframes move-L {
+  0% {
+    right: 7px;
+    bottom: 7px;
+    opacity: 0;
+  }
+
+  30% {
+    right: 7px;
+    bottom: 7px;
+    opacity: 1;
+  }
+
+  70% {
+    bottom: 7px;
+    right: 187px;
+opacity: 1;
+  }
+
+  90% {
+    right: 187px;
+    bottom: 400px;
+    opacity: 1;
+  }
+
+  100% {
+    right: 187px;
+    bottom: 400px;
+    opacity: 0;
+  }
+}

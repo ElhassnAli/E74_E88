@@ -1,0 +1,24 @@
+
+span{
+  width: 200px;
+  height: 200px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin: 50px auto;
+  display: block;
+  border: 10px solid black;
+  border-left-color: transparent;
+  animation-name: one;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+@keyframes one{
+  100%{
+    rotate: 360deg;
+  }
+}
+span:hover{
+ animation-play-state: paused;
+}
