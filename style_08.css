@@ -1,0 +1,11 @@
+.one :first-child div:nth-last-of-type(2){
+  color: red;
+  font: 40px bold;
+  
+}
+
+body > :last-child :not(h3,div:last-of-type,div:first-of-type){
+  color: red ;
+  color: red;
+  font: 40px bold;
+}

@@ -1,0 +1,10 @@
+.one div:first-of-type,.one div:last-of-type{
+  color:red;
+  font-size: 40px;
+  font-weight: bold;
+}
+.parent div:nth-child(2){
+  color: red;
+  font-size: 40px;
+  font-weight: bold;
+}

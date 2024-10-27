@@ -1,0 +1,51 @@
+.arrow{
+ width: 300px;
+ padding: 20px 0;
+ background-color: #ccc;
+ color: black;
+ margin: 20px ;
+ font: 25px bold;
+ position: relative;
+ text-align: center;
+}
+.top:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 20px solid ;
+  border-color: transparent transparent #ccc transparent;
+  position: absolute;
+  top: -40px;
+  left:130px;
+}
+.right:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 20px solid;
+  border-color: transparent transparent transparent #ccc;
+  position: absolute;
+  right: -40px;
+  bottom: 12px;
+}
+.bottom:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 20px solid;
+  border-color:  #ccc transparent transparent transparent;
+  position: absolute;
+   
+  left: 130px;
+  bottom: -40px;
+}
+.left:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 20px solid;
+  border-color: transparent  #ccc transparent transparent;
+  position: absolute;
+  top: 12px;
+  left: -40px;
+}
